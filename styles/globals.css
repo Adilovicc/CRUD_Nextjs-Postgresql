@@ -1,4 +1,42 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  ::-webkit-scrollbar{
+    @apply w-2 md:w-3 transition duration-300
+  }
+  
+}
+
+body{
+ /*::-webkit-scrollbar{
+    @apply w-2 md:w-3 opacity-0 
+  }
+  ::-webkit-scrollbar-track{
+    @apply bg-[#16475b] opacity-0
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply bg-[#04212d] rounded-full opacity-0
+  }*/
+   overflow-x:hidden;
+   overflow-y:overlay;
+}
+
+::-webkit-scrollbar{
+  background-color:rgba(232, 241, 255, 0.104);
+}
+
+::-webkit-scrollbar:hover{
+  background-color:rgba(232, 241, 255, 0.47);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0e1c22c2;
+}
+
+
+/*html,
 body {
   padding: 0;
   margin: 0;
@@ -23,4 +61,4 @@ a {
     color: white;
     background: black;
   }
-}
+}*/
