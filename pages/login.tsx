@@ -4,7 +4,7 @@ import loginLogo from '../public/loginLogo.png'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 
-export default function login ({session}:any) {
+export default function Login ({session}:any) {
     const router = useRouter();
     useEffect(()=>{
         if(session){
@@ -12,7 +12,7 @@ export default function login ({session}:any) {
            router.push('/');
 
         }
-    })
+    },[])
     return(
         <section className="h-screen w-full flex flex-col justify-center items-center bg-yellow-600">
              
