@@ -1,0 +1,20 @@
+{
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@vercel/next",
+        "config": {
+          "prerender": false
+        }
+      },
+      {
+        "src": "prisma",
+        "use": "@prisma/client"
+      },
+      {
+        "src": ".next/prisma",
+        "use": "@prisma/client"
+      }
+    ],
+    "version": 2
+  }
