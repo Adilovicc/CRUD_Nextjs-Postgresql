@@ -6,7 +6,6 @@ const too = (req) =>{
   }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
-    too(req.body);
     const {id,title, content} = req.body
 
     try{

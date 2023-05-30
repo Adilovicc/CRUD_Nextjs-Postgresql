@@ -23,6 +23,67 @@ body{
    overflow-y:overlay;
 }
 
+/* TOP MENU */
+
+
+.top-menu{
+   display:flex;
+   top:0;
+   width:100%;
+   position:fixed;
+   justify-content: space-between;
+   align-items: center;
+   padding-left:40px;
+   padding-right:40px;
+   padding-top:30px;
+   padding-bottom:5px;
+   transition:1s ease-in-out;
+   background-color:rgba(240, 248, 255, 0.057);
+   backdrop-filter: blur(20px);
+   z-index: 49;
+}
+
+.top-menu-scrolled{
+   padding-top:5px;
+   padding-bottom:5px;
+}
+
+#searchSection{
+  border:solid 0px;
+  border-radius:0px;
+  border-color: rgba(0, 0, 0, 0.455);
+  transition:0.5 ease-in-out
+}
+
+#searchSection.searchVisible{
+   border:solid 1px;
+   border-radius:35px;
+}
+
+.myInput{
+  scale:0;
+  transition: 0.5s ease-out;
+}
+
+.myInput-visible{
+  scale:1;
+}
+
+.searchInput{
+  width:0;
+  transition:0.5s ease-in;
+}
+
+.searchInput.searchInputVisible{
+  width:200px;
+}
+
+#logo{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar{
   background-color:rgba(232, 241, 255, 0.104);
 }

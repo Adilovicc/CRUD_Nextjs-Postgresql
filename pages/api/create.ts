@@ -4,12 +4,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
     
-    const {title, content} = req.body
+    const {title, content, authorId} = req.body
+    console.log('AUTOR ID je '+ authorId);
     try{
         await prisma.note.create({
             data:{
                 title,
-                content
+                content,
+                userId:authorId
             }
         })
         res.status(200).json({message: 'Note Created'})
