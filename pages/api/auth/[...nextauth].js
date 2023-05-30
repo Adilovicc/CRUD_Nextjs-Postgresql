@@ -8,6 +8,7 @@ import {PrismaAdapter} from '@next-auth/prisma-adapter'
 export const authOptions = {
   // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
+  secret: process.env.JWT_SECRET,
   providers: [
     GoogleProvider({
         clientId: process.env.GOOGLE_CLIENT_ID,
