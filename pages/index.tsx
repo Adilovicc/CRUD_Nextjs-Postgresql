@@ -52,7 +52,7 @@ export default function Home ({results, user}:any){
           'Content-Type': 'application/json'
         },
         method: 'POST'
-      }).then(()=> {setFormDt({id:'',title:'', content:'',authorId:user.id}); refresh()}).finally(()=>setLoadingCreate(false));
+      }).then(()=> {setFormDt({id:'',title:'', content:'',authorId:user.id}); refresh()}).catch((err)=>console.log(err)).finally(()=>setLoadingCreate(false));
     } catch (error) {
        console.log("Greska (fetch u index.tsx)"+ error)
     }
