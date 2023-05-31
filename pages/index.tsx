@@ -45,7 +45,7 @@ export default function Home ({results, user}:any){
  function create(data: FormData){
     setLoadingCreate(true);
     try {
-      fetch('http://localhost:3000/api/create',
+      fetch('https://crud-nextjs-postgresql.vercel.app/api/create',
       {
         body: JSON.stringify(data),
         headers: {
@@ -60,7 +60,7 @@ export default function Home ({results, user}:any){
   
   function deleteNote(id: string){
        try {
-         fetch(`http://localhost:3000/api/note/${id}`,
+         fetch(`https://crud-nextjs-postgresql.vercel.app/api/note/${id}`,
          {
              headers:{
               "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function Home ({results, user}:any){
   function updateNote(data:FormData){
       setLoadingCreate(true);
       try {
-          fetch(`http://localhost:3000/api/update`,
+          fetch(`https://crud-nextjs-postgresql.vercel.app/api/update`,
           {
             body: JSON.stringify(data),
             headers:{
