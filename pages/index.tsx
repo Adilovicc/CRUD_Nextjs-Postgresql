@@ -42,7 +42,7 @@ export default function Home ({results, user}:any){
     router.replace(router.asPath);
   }
  
-  async function create(data: FormData){
+ function create(data: FormData){
     setLoadingCreate(true);
     try {
       fetch('http://localhost:3000/api/create',
@@ -58,7 +58,7 @@ export default function Home ({results, user}:any){
     }
   }
   
-  async function deleteNote(id: string){
+  function deleteNote(id: string){
        try {
          fetch(`http://localhost:3000/api/note/${id}`,
          {
@@ -74,7 +74,7 @@ export default function Home ({results, user}:any){
        }
   }
 
-  async function updateNote(data:FormData){
+  function updateNote(data:FormData){
       setLoadingCreate(true);
       try {
           fetch(`http://localhost:3000/api/update`,
@@ -208,7 +208,8 @@ export default function Home ({results, user}:any){
         removeEventListener('click', handleCloseFormSection);
       }
 
-  },[])
+  })
+
   useEffect(()=>{
       if(!loadingCreate){
         $('body').css('overflow','auto');
@@ -229,7 +230,7 @@ export default function Home ({results, user}:any){
     {
     <div className="h-[4000px] relative overflow-hidden overflow-y-auto pt-40">
         <div className={`fixedFormSection top-0 left-0 right-0 bottom-0 bg-gray-500/20 backdrop-blur-lg z-50 flex justify-center items-center ${toggleBodyScroll ? 'fixed' : 'hidden' }`} onClick={()=>toggleScroll(false)}>
-            {loadingCreate ? <div className='text-2xl animation-pulse font-bold'>Creating...</div> : noteInputForm()}
+            {loadingCreate ? <div className='text-2xl animate-pulse font-bold'>Creating...</div> : noteInputForm()}
         </div>
         <div className={`top-menu ${scrolled ? 'top-menu-scrolled' : ''}`}>
           <div id="logo" className="w-1/4 max-w-[100px] h-[70px] z-50 flex items-center">

@@ -14,8 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 userId:authorId
             }
         })
-        res.status(200).json({message: 'Note Created'})
+       return res.status(200).json({message: 'Note Created'})
     } catch (error){
-        console.log("Failure! Greška u create.ts");
+       return res.status(500).json({message: error})
     }
 }
