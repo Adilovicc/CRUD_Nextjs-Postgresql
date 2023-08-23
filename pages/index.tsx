@@ -226,7 +226,7 @@ export default function Home ({results, user}:any){
 
   return (
     <>
-
+      
     {
     <div className="h-[4000px] relative overflow-hidden overflow-y-auto pt-40">
         <div className={`fixedFormSection top-0 left-0 right-0 bottom-0 bg-gray-500/20 backdrop-blur-lg z-50 flex justify-center items-center ${toggleBodyScroll ? 'fixed' : 'hidden' }`} onClick={()=>toggleScroll(false)}>
